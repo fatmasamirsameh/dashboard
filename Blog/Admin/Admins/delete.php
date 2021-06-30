@@ -12,7 +12,7 @@ $message = '';
     if(filter_var($id,FILTER_VALIDATE_INT)){
         // CODE ....... 
 
-        $sql = "delete from admins where id = ".$id;
+        $sql = "delete from admin where id = ".$id;
         $op  = mysqli_query($con,$sql);
 
         if($op){

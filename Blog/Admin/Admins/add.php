@@ -121,7 +121,7 @@
      if(count($errorMessages) == 0){
 
       $password = sha1($password);
-      $sql = "insert into admins ( `name`, `address`, `phone`, `role_id`, `password`, `email`) values ('$name','$address','$phone',$role,'$password','$email')";
+      $sql = "insert into admin ( `name`, `address`, `phone`, `role_id`, `password`, `email`) values ('$name','$address','$phone',$role,'$password','$email')";
 
       $op = mysqli_query($con,$sql);
 
