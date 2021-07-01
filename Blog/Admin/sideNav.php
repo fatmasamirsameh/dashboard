@@ -1,4 +1,6 @@
-        
+
+
+
         <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
@@ -9,22 +11,27 @@
                                 Dashboard
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                              
-                            
-                            
-                            
-                            
-                            
-                            
+                    
+                    
+
+       <?php 
+       
+           if($_SESSION['role_id'] == 1){
+       
+       
+       ?>
+
+
+                    
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts0" aria-expanded="false" aria-controls="collapseLayouts"> 
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Admin Roles
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <div class="collapse" id="collapseLayouts0" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Add Role</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Display</a>
+                                    <a class="nav-link" href=" <?php echo url('AdminRoles/add.php');?>">Add Role</a>
+                                    <a class="nav-link" href="  <?php echo url('AdminRoles/display.php');?>">Display</a>
                                 </nav>
                             </div>
 
@@ -32,7 +39,74 @@
 
 
 
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+
+
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts"> 
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Admins
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="<?php echo url('Admin/add.php');?>">Add Admin</a>
+                                    <a class="nav-link" href="<?php echo url('Admin/display.php');?>">Display</a>
+                                </nav>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts"> 
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                               Products Category
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="<?php echo url('Categories/add.php');?>">Add Category</a>
+                                    <a class="nav-link" href="<?php echo url('Categories/display.php');?>">Display</a>
+                                </nav>
+                            </div>
+
+
+
+
+<?php } ?>
+
+
+
+
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts"> 
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                              Products
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="<?php echo url('Products/add.php');?>">Add Product</a>
+                                    <a class="nav-link" href="<?php echo url('Products/display.php');?>">Display</a>
+                                </nav>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pages
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -62,8 +136,17 @@
                                         </nav>
                                     </div>
                                 </nav>
-                            </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            </div> -->
+
+
+
+
+
+
+
+
+
+                            <!-- <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
@@ -73,10 +156,12 @@
                                 Tables
                             </a>
                         </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
+                    </div> -->
+
+
+                    <!-- <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
                         Start Bootstrap
-                    </div>
+                    </div> -->
                 </nav>
             </div>

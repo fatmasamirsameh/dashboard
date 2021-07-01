@@ -128,10 +128,10 @@
 					
 						<li><?php
                            
-                            if(isset($_SESSION["id"])){
-                                $sql = "SELECT first_name FROM user WHERE id='$_SESSION[id]'";
+                            if(isset($_SESSION["user_id"])){
+                                $sql = "SELECT first_name FROM user WHERE id='$_SESSION[user_id]'";
                                 $query = mysqli_query($con,$sql);
-                                $row=mysqli_fetch_array($query);
+                             $row = mysqli_fetch_array($query);
                                 
                                 echo '
                                <div class="dropdownn">

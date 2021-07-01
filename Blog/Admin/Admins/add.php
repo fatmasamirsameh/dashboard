@@ -1,7 +1,10 @@
-<?php             
+<?php 
+ include '../operations/connection.php'; 
+  include '../operations/functions.php';           
    include '../operations/checkLogin.php';
-   include '../operations/connection.php';
-   include '../operations/functions.php';
+ 
+  
+ 
    include '../header.php';
             
  

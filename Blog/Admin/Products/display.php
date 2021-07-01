@@ -1,12 +1,11 @@
 <?php            
-include '../operations/functions.php';
-include '../operations/checkLogin.php';
-include '../operations/checkpermission.php';
-include '../operations/connection.php';
+   include '../operations/functions.php';
+   include '../operations/checkLogin.php';
+   include '../operations/connection.php';
 include '../header.php';
 
 
- $sql = "select admin.* , roles.title as roleTitle from admin join roles on admin.role_id = roles.id";
+ $sql = "select products.* , categories.title as CatTitle  , admin.name as addedBy from Products join categories on products.cat_id = categories.id  join admin on products.added_by = admin.id";
  $op  = mysqli_query($con,$sql);
 
 
@@ -66,11 +65,11 @@ include '../header.php';
                                             <tr>
 
                                                 <th>#id</th>
-                                                <th>Name</th>
-                                                <th>Address</th>
-                                                <th>Phone</th>
-                                                <th>Email</th>
-                                                <th>Role</th>
+                                                <th>Title</th>
+                                                <th>Content</th>
+                                                <th>Category</th>
+                                                <th>AddedBy</th>
+                                                <th>Image</th>
                                                 <th>Action</th>
                             
                                             </tr>
@@ -84,11 +83,11 @@ include '../header.php';
 
                                              <tr>
                                                 <td><?php echo $data['id'];?></td>
-                                                <td><?php echo $data['name'];?></td>
-                                                <td><?php echo $data['address'];?></td>
-                                                <td><?php echo $data['phone'];?></td>
-                                                <td><?php echo $data['email'];?></td>
-                                                <td><?php echo $data['roleTitle'];?></td>
+                                                <td><?php echo $data['title'];?></td>
+                                                <td><?php echo substr($data['desc'],0,50);?></td>
+                                                <td><?php echo $data['CatTitle'];?></td>
+                                                <td><?php echo $data['addedBy'];?></td>
+                                                <td> <img src="uploads/<?php echo $data['image'];?>" width="40px"  >  </td>
             <td><!-- table body will be here -->
                 <a href='delete.php?id=<?php echo $data['id']; ?>' class='btn btn-danger m-r-1em'>Delete</a>
                 <a href='edit.php?id=<?php echo $data['id'];?>'    class='btn btn-primary m-r-1em'>Edit</a>  

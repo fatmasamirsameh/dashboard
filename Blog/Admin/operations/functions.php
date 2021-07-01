@@ -1,4 +1,5 @@
 <?php  
+session_start();
 
  # clean code function ... 
  function Clean($input){
@@ -9,6 +10,18 @@
 
     return $input;
    }
+
+
+
+
+
+function url($url){
+    return   "http://".$_SERVER['HTTP_HOST']."/Task15/blog/Admin/".$url;
+}
+
+
+
+
 
 
 

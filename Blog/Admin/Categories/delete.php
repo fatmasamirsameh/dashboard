@@ -1,8 +1,8 @@
 <?php 
-  include '../operations/functions.php';
-  include '../operations/checkLogin.php';
-  include '../operations/checkpermission.php';
-  include '../operations/connection.php';
+   include '../operations/functions.php';
+   include '../operations/checkLogin.php';
+   include '../operations/checkpermission.php';
+   include '../operations/connection.php';
 $message = '';
 
  if($_SERVER['REQUEST_METHOD'] == "GET"){
@@ -14,7 +14,7 @@ $message = '';
     if(filter_var($id,FILTER_VALIDATE_INT)){
         // CODE ....... 
 
-        $sql = "delete from admin where id = ".$id;
+        $sql = "delete from categories where id = ".$id;
         $op  = mysqli_query($con,$sql);
 
         if($op){

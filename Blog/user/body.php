@@ -139,7 +139,7 @@
 									<div class="products-slick" data-nav="#slick-nav-1" >
 									
 									<?php
-                    include './operations/connection.php';
+                  
 								
                     
 					$product_query = "SELECT * FROM products,categories ";
@@ -154,7 +154,7 @@
                         $pro_price = $row['price'];
                         $pro_image = $row['image'];
 
-                        $cat_name = $row["name"];
+                        $cat_name = $row["title"];
 
                         echo "
 				
@@ -299,7 +299,7 @@
 									<div class="products-slick" data-nav="#slick-nav-2">
 										<!-- product -->
 										<?php
-                    include './operations/connection.php';
+                   
 				
 								
 					$product_query = "SELECT * FROM products,categories ";
@@ -314,7 +314,7 @@
 							$pro_price = $row['price'];
 							$pro_image = $row['image'];
 	
-							$cat_name = $row["name"];
+							$cat_name = $row["title"];
 
                         echo "
 				
